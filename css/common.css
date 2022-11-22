@@ -1,0 +1,174 @@
+/*common.css*/
+@font-face{
+    font-family:'모리스9'; 
+    src: url(../fonts/모리스9.ttf),
+		url(../fonts/모리스9.eot),
+		url(../fonts/모리스9.woff);
+}
+
+@font-face{
+    font-family:'Pixel';
+    src: url('../fonts/Pixel.ttf'),
+    url('../fonts/Pixel.eot'),
+    url('../fonts/Pixel.woff'),
+}
+body{
+    font-family: '모리스9';
+}
+
+.navWrap{
+    font-family:'Pixel';
+}
+footer{
+    font-family: '모리스9';
+}
+.ftr{
+    font-family: '모리스9';
+}
+.hdrWrap{
+   font-family:'';
+}
+.mnWrap{
+   font-family:'';
+}
+main{
+	font-family: '';
+}
+
+div.content{
+}
+div.content>header{
+    text-align: center;
+    color: #000;
+}
+div.content>header>h2{
+    line-height: 80px;
+    font-size: 36px;
+}
+div.content>header>p{
+    line-height: 40px;
+    font-size: 14px;
+}
+
+div.content>section{
+    width: 1080px; 
+    margin: 80px auto 0;
+}
+
+*.fl{
+    float: left;
+}
+*.fr{
+    float: right;
+}
+
+
+
+body{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.hdrWrap{
+    width: 100%;
+    height: 120px;
+}
+.hdrWrap>header{
+}
+.hdrWrap>header>ul{
+    overflow: hidden;
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+.hdrWrap>header>ul>li{
+    margin: 25px 20px 0;
+    cursor: pointer;
+}
+.hdrWrap>header>ul>.menu{
+    float: left;
+}
+.hdrWrap>header>ul>.menu>.icon{
+    background-image: url('../img/header/icon_09.png');
+    width: 69px;
+    height: 69px;
+    background-position: center;
+    background-size: cover;
+}
+.hdrWrap>header>ul>.home{
+    position: absolute;
+	margin: 18px auto 0;
+	left: 0;right: 0;
+    width: 159px;height: 75px;
+}
+.hdrWrap>header>ul>.home>a>.icon{
+    background-image: url('../img/header/icon_06.png');
+    width: 159px;
+    height: 75px;
+    background-position: center;
+    background-size: cover;
+}
+
+.hdrWrap>header>ul>.mail{
+    float: right;
+    margin-top: 14px;
+}
+.hdrWrap>header>ul>.mail>a>.icon{
+    background-image: url('../img/header/icon_03.png');
+    width: 88px;
+    height: 106px;
+    background-position: center;
+    background-size: cover;
+}
+
+.hdrWrap>header>ul>.mail2{
+    float: right;
+}
+.hdrWrap>header>ul>.mail2>a>.icon{
+    margin-top: 14px;
+    margin-right: 15px;
+    background-image: url('../img/header/images/mail_03.png');
+    width: 69px;
+    height: 47px;
+    background-position: center;
+    background-size: cover;
+}
+
+.navWrap{
+    z-index: 1;
+    width: 380px;
+    height: 88vh;
+    background-color: #bc849c;
+    position: absolute;
+    display: ;
+    margin-left: -380px;
+}
+.navWrap>.nav{
+    margin-left: 16%;
+    margin-top: 40px;
+}
+.navWrap>.nav>li{
+    font-weight: bold;
+    color: white;
+    line-height: 80px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.navWrap>.ftr{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #121212;
+    z-index: 10;
+}
+.navWrap>.ftr>ul{
+}
+.navWrap>.ftr>ul>li{
+    color: white;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}

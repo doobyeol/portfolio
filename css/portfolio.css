@@ -1,0 +1,39 @@
+/*portfolio.css*/
+
+.bnrWrap{}
+.bnrWrap>.bnr{
+    background-image: url('../img/portfolio/images/banner_10.png');
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+}
+
+.content{
+    width: 800px;
+    margin: 0 auto;
+}
+.content>.artWrap{
+    padding-top: 20px;
+    overflow: hidden;
+}
+.content>.artWrap>a>article{
+    float: left;
+    width: 45%;height: 320px;
+    background-position: center;
+    background-size: cover;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.artWrap>a>.p{
+    background-image: url('../img/portfolio/images/article_13.png');
+}
+.artWrap>a>.t{
+    background-image: url('../img/portfolio/images/article_15.png');
+}
+.artWrap>a>.g{
+    background-image: url('../img/portfolio/images/article_17.png');
+}
+.artWrap>a>.a{
+    background-image: url('../img/portfolio/images/article_18.png');
+}

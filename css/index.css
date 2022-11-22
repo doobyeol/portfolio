@@ -1,0 +1,135 @@
+/*intro*/
+.introWrap{
+    
+    position: relative;
+    background-image: url('../img/intro/images/bgi_01.png');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.introWrap>.illust{
+    position: absolute;
+    background-image: url('../img/intro/images/illust_03.png');
+    width: 952px;
+    height: 940px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    bottom: 0;right: 0;left: 0;
+}
+.introWrap>.illust>.play{
+    position: absolute;
+    background-image: url('../img/intro/images/stop.gif');
+    );
+    width: 500px;height: 300px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    top: 0;bottom: 0;right: 0;left: 0;
+}
+.introWrap>.illust>.stop{
+    display: none;
+    position: absolute;
+    background-image: url('../img/intro/images/play.gif');
+    );
+    width: 500px;height: 300px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    top: 0;bottom: 0;right: 0;left: 0;
+}
+
+.introWrap>.txt{
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    width: 100px;height: 40px;
+    color: white;
+    margin: auto;
+    bottom: 245px;left: 0;right: 0;
+    font-size: 18px;
+    text-align: center;
+}
+.introWrap>.btnB{
+    position: absolute;
+    background-image: url('../img/intro/images/btn_03.png');
+    width: 108px;
+    height: 93px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    bottom: 170px;left: 0;right: 0;
+    cursor: pointer;
+}
+.introWrap>.btnA{
+    display: none;
+    position: absolute;
+    background-image: url('../img/intro/images/btn2_03.png');
+    width: 108px;
+    height: 72px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    bottom: 170px;left: 0;right: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*index.css*/
+
+
+.content{
+    position: relative;
+    width: 100%;
+}
+.content>.cover{
+    background-image: url('../img/content/cover_13.png');
+    width: 100%;
+    height: 360px;
+    background-position: center;
+    background-size: cover;
+}
+.content>.profile{
+    position: absolute;
+    top: 68%;left: 25%;
+}
+.content>.profile>.pic{
+    background-image: url('../img/content/pic_15.png');
+    width: 225px;
+    height: 225px;
+    background-position: center;
+    background-size: cover;
+}
+.content>.button{
+    background-image: url('../img/content/button_20.png');
+    width: 202px;
+    height: 37px;
+    background-position: center;
+    background-size: cover;
+    float: right;
+    margin-right: 25%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.txt{
+    width: 55%;
+    margin: 0 auto;
+    padding: 125px 0 0;
+    color: black;
+}
+.txt>li{
+    font-size: 28px;
+    line-height: 40px;
+    margin: 10px 0;
+}
+.txt>.name{
+    font-size: 38px;
+}
+
+

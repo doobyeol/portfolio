@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sub4.html</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sub4.css">
+    
+    <script src="js/jQuery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="hdrWrap">
+        <header>
+           <ul>
+               <li class="menu">
+                   <a href="portfolio.html"><div class="back"></div></a>
+               </li>
+               <li class="home">
+                   <a href="http://doobyeol.dothome.co.kr"><div class="icon"></div></a>
+               </li>
+           </ul>
+        </header>
+    </div>
+    
+    <div class="navWrap">
+        <ul class="nav">
+            <li>ABOUT ME</li>
+            <li>PORTFOLIO</li>
+            <li>CONTACK</li>
+        </ul>
+        
+        <div class="ftr">
+           <ul>
+               <li>
+                    ⓒ2018 Kim Doo Byeol. All Rights &amp; Copyright Reserved.
+               </li>
+           </ul>
+        </div>
+    </div>
+    
+    <div class="conWrap">
+        <div class="content"></div>
+        <div class="site">
+           <a href="http://aladinstory.dothome.co.kr/">
+               <div class="click"></div>
+           </a>
+        </div>
+    </div>
+    
+    <script type=text/javascript>
+        $(document).ready(function(){
+
+            $(".return-top").hide(); 
+            $(function (){
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 500) {
+                        $('.return-top').fadeIn();
+                    } else {
+                        $('.return-top').fadeOut();
+                    }
+                });
+
+                $('.return-top').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 300);  // 탑 이동 스크롤 속도
+                    return false;
+                });
+            });
+
+        });
+        </script>
+        <a class="return-top" href="#" style="right:15px; bottom:15px; position:fixed; z-index:9999;">
+        <img src="img/top2.png" alt="" width="50px" height="50px">
+        </a>
+</body>
+</html>
