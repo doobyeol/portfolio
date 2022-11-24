@@ -1,35 +1,38 @@
-/*sub2.css*/
+/*sub3.css*/
 
-body{
+body {
     overflow: inherit;
 }
-.hdrWrap>header>ul>.menu>a>.back{
-    background-image: url('../img/mail/back_03.png');
+
+.hdrWrap>header>ul>.menu>a>.back {
+    background-image: url('../assets/img/mail/back_03.png');
     width: 69px;
     height: 69px;
     background-position: center;
     background-size: cover;
 }
-.conWrap{
-}
-.conWrap>.content{
-    background-image: url('../img/sub1/images/sub2_02.png');
+
+.conWrap {}
+
+.conWrap>.content {
+    background-image: url('../assets/img/sub1/images/sub3_02.png');
     width: 100%;
-    height: 9697px;
+    height: 7418px;
     background-position: center;
     background-size: cover;
 }
 
-.conWrap>.site{
+.conWrap>.site {
     cursor: pointer;
     position: relative;
     z-index: 20;
     width: 400px;
     margin: 0 auto;
 }
-.conWrap>.site>a>.click{
+
+.conWrap>.site>a>.click {
     position: absolute;
     width: 387px;
     height: 120px;
-    margin-top: -6930px;
+    margin-top: -4400px;
 }
