@@ -158,8 +158,8 @@ body {
     height: 88vh;
     background-color: #bc849c;
     position: absolute;
-    display: ;
-    margin-left: -380px;
+    /* display: block; */
+    /* margin-left: -380px; */
 }
 
 .navWrap>.nav {

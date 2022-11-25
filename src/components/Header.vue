@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { ref, onBeforeMount } from "vue";
+
+const emit = defineEmits(["showMenu"]);
+const props = defineProps<{ showNav: boolean }>()
+
+function showMenu() {
+  console.log('showMenu');
+  emit('showMenu', !props.showNav);
+}
 </script>
 
 <template>
@@ -6,7 +15,7 @@
     <header>
       <ul>
         <li class="menu">
-          <div class="icon"></div>
+          <div class="icon" @click="showMenu"></div>
         </li>
         <li class="home">
           <a href=""><div class="icon"></div></a>

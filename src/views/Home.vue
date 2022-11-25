@@ -7,12 +7,12 @@
     <div class="profile">
       <div class="pic"></div>
     </div>
-    <div class="button"><a href="http://doobyeol.dothome.co.kr"></a></div>
+    <div class="button"><a href=""></a></div>
   </div>
   <ul class="txt">
     <li class="name">두별</li>
-    <li>Kim Doo Byeol</li>
-    <li>Web Designer &amp; Publisher</li>
-    <li>Doobyeol@gmail.com</li>
+    <li>Doobyeol Kim</li>
+    <li>Web Designer & Publisher & Developer</li>
+    <li>doobyeol@gmail.com</li>
   </ul>
 </template>
