@@ -1,24 +1,24 @@
 <script setup lang="ts">
 import Header from "@/components/Header.vue";
 import Nav from "@/components/Nav.vue";
-import { ref, watch } from 'vue'
+import { ref, watch } from "vue";
 
-const showNav = ref(false);
+const isShowNav = ref(false);
 
 function showMenu(isShow: boolean) {
-  console.log('isShow: ', isShow);
-  console.log('showMenu: ', showMenu);
-  
-  showNav.value = isShow;
+  console.log("isShow: ", isShow);
+  console.log("showMenu: ");
+
+  isShowNav.value = isShow;
 }
 
-watch(showNav, () => {
+watch(isShowNav, () => {
   console.log();
 });
 </script>
 
 <template>
-  <Header @showMenu="showMenu" :showNav="showNav"></Header>
-  <Nav v-show="showNav"></Nav>
-  <router-view  @click="showMenu(false)"/>
+  <Header @showMenu="showMenu" :isShowNav="isShowNav"></Header>
+  <Nav :class="isShowNav ? 'show' : ''"></Nav>
+  <router-view @click="showMenu(false)" />
 </template>

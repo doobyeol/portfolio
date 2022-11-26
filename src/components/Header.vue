@@ -2,11 +2,11 @@
 import { ref, onBeforeMount } from "vue";
 
 const emit = defineEmits(["showMenu"]);
-const props = defineProps<{ showNav: boolean }>()
+const props = defineProps<{ isShowNav: boolean }>();
 
 function showMenu() {
-  console.log('showMenu');
-  emit('showMenu', !props.showNav);
+  console.log("showMenu");
+  emit("showMenu", !props.isShowNav);
 }
 </script>
 
@@ -18,10 +18,10 @@ function showMenu() {
           <div class="icon" @click="showMenu"></div>
         </li>
         <li class="home">
-          <a href=""><div class="icon"></div></a>
+          <div class="icon"></div>
         </li>
         <li class="mail">
-          <a href="mail.html"><div class="icon"></div></a>
+          <div class="icon"></div>
         </li>
       </ul>
     </header>
