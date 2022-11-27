@@ -21,7 +21,7 @@ function showMenu() {
           <div class="icon" @click="router.push('/')"></div>
         </li>
         <li class="mail">
-          <div class="icon"></div>
+          <div class="icon" @click="router.push('/about')"></div>
         </li>
       </ul>
     </header>

@@ -29,15 +29,10 @@ footer {
     font-family: '모리스9';
 }
 
-.hdrWrap {
-    font-family: '';
-}
-
-.mnWrap {
-    font-family: '';
-}
-
-main {
+.hdrWrap,
+.mnWrap,
+main,
+.chat_wrap {
     font-family: '';
 }
 
@@ -69,7 +64,9 @@ div.content>section {
     float: right;
 }
 
-
+#app {
+    height: 100vh;
+}
 
 body {
     width: 100%;
