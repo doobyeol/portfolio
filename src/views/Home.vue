@@ -17,7 +17,6 @@ function addBookmark(e: Event) {}
   </div>
   <ul class="txt">
     <li class="name">두별</li>
-    <li>Doobyeol Kim</li>
     <li>Web Developer</li>
     <li>doobyeol@gmail.com</li>
   </ul>
@@ -80,12 +79,12 @@ function addBookmark(e: Event) {}
 }
 
 .txt > li {
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 1.3em;
+  line-height: 21px;
 }
 
 .txt > .name {
-  font-size: 27px;
+  font-size: 1.3em;
   line-height: 40px;
 }
 

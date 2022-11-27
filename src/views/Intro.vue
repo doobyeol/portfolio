@@ -206,11 +206,19 @@ const clickStopButton = () => {
     margin-left: 20%;
   }
 }
+@media (max-width: 320px) {
+  .introWrap .illust > div {
+    height: 13%;
+    top: -13vh;
+  }
+}
 
 @media (max-width: 280px) {
   .introWrap .illust > div {
-    height: 18%;
-    top: -3vh;
+    /* height: 18%;
+    top: -3vh; */
+    height: 15%;
+    top: -17vh;
   }
 }
 </style>

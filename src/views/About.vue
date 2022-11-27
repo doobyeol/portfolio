@@ -58,7 +58,7 @@ function showPopup() {
   display: flex;
   width: 100%;
   height: 6%;
-  min-width: 280px;
+  /* min-width: 280px; */
   max-width: 800px;
   max-height: 50px;
   margin: 15px auto 0;
@@ -117,7 +117,7 @@ function showPopup() {
 .content .chat_wrap {
   width: 100%;
   height: 85%;
-  min-width: 280px;
+  /* min-width: 280px; */
   max-width: 800px;
   margin: 0 auto;
   border-radius: 5px;
