@@ -18,12 +18,14 @@ function showPopup(isShow: boolean) {
 </script>
 
 <template>
-  <Header :isShowNav="isShowNav" @showMenu="showMenu" />
-  <AskPop v-show="isShowPop" @showPopup="showPopup" />
-  <PopupBg
-    v-show="isShowNav || isShowPop"
-    @click="showMenu(false), showPopup(false)"
-  />
-  <Nav :class="isShowNav ? 'show' : ''" @showMenu="showMenu" />
-  <router-view @showPopup="showPopup" />
+  <div>
+    <Header :isShowNav="isShowNav" @showMenu="showMenu" />
+    <AskPop v-show="isShowPop" @showPopup="showPopup" />
+    <PopupBg
+      v-show="isShowNav || isShowPop"
+      @click="showMenu(false), showPopup(false)"
+    />
+    <Nav :class="isShowNav ? 'show' : ''" @showMenu="showMenu" />
+    <router-view @showPopup="showPopup" />
+  </div>
 </template>
