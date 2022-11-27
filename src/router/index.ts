@@ -9,6 +9,18 @@ const routes: Array<RouteRecordRaw> = [
         path: "/about",
         component: () => import("@/views/About.vue"),
     },
+    {
+        path: "/intro",
+        component: () => import("@/views/Intro.vue"),
+    },
+    {
+        path: "/portfolio",
+        component: () => import("@/views/Portfolio.vue"),
+    },
+    {
+        path: "/contack",
+        component: () => import("@/views/CONTACK.vue"),
+    },
 ];
 
 export default createRouter({

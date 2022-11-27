@@ -72,9 +72,11 @@ div.content>section {
 
 
 body {
-    height: 100%;
+    width: 100%;
     position: relative;
     overflow: hidden;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 .hdrWrap {
@@ -87,10 +89,8 @@ body {
 .hdrWrap>header>ul {
     overflow: hidden;
     display: flex;
-    /* position: relative; */
     width: 95%;
     margin: 0 auto;
-    /* display: flex; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,12 +98,10 @@ body {
 }
 
 .hdrWrap>header>ul>li>div {
-    /* margin: 13px 5px 0; */
     cursor: pointer;
 }
 
 .hdrWrap>header>ul>.menu {
-    /* float: left; */
     flex: 1;
 }
 
@@ -116,14 +114,8 @@ body {
 }
 
 .hdrWrap>header>ul>.home {
-    /* position: absolute; */
-    /* margin: 18px auto 0; */
-    /* left: 0; */
-    /* right: 0; */
     width: 76px;
     height: 34px;
-    /* justify-content: center; */
-    /* align-items: center; */
     flex: 21;
 }
 
@@ -137,8 +129,6 @@ body {
 }
 
 .hdrWrap>header>ul>.mail {
-    /* float: right; */
-    /* margin-top: 11px; */
     flex: 1;
 }
 
@@ -165,12 +155,12 @@ body {
 }
 
 .navWrap {
-    z-index: 1;
+    z-index: 2;
     width: 280px;
-    height: calc(100vh - 54px);
+    height: 100vh;
+    top: 0;
     background-color: #bc849c;
     position: absolute;
-    /* display: block; */
     margin-left: -380px;
     transition: 0.2s;
 }
@@ -180,8 +170,7 @@ body {
 }
 
 .navWrap>.nav {
-    margin-left: 7%;
-    margin-top: 7px;
+    margin: 20px 0 0 27px;
 }
 
 .navWrap>.nav>li {
@@ -192,12 +181,17 @@ body {
     cursor: pointer;
 }
 
+.navWrap>.nav>li a {
+    width: 100%;
+    display: inline-block;
+}
+
 .navWrap>.ftr {
     position: absolute;
     margin: auto;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 80px;
     background-color: #121212;
     z-index: 10;
 }
@@ -206,7 +200,17 @@ body {
 
 .navWrap>.ftr>ul>li {
     color: white;
-    line-height: 40px;
+    line-height: 20px;
     font-size: 13px;
-    text-align: center;
+    padding: 20px;
+}
+
+.bgWrap {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(59 47 72 / 63%);
+    width: 100%;
+    height: 100vh;
 }

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onBeforeMount } from "vue";
+import router from "@/router";
 
 const emit = defineEmits(["showMenu"]);
 const props = defineProps<{ isShowNav: boolean }>();
 
 function showMenu() {
-  console.log("showMenu");
   emit("showMenu", !props.isShowNav);
 }
 </script>
@@ -18,7 +18,7 @@ function showMenu() {
           <div class="icon" @click="showMenu"></div>
         </li>
         <li class="home">
-          <div class="icon"></div>
+          <div class="icon" @click="router.push('/')"></div>
         </li>
         <li class="mail">
           <div class="icon"></div>
