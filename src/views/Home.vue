@@ -22,3 +22,76 @@ function addBookmark(e: Event) {}
     <li>doobyeol@gmail.com</li>
   </ul>
 </template>
+
+<style scoped>
+.container {
+  height: 100vh;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+}
+
+.content > .cover {
+  background-image: url(/src/assets/img/content/cover_13.png);
+  width: 100%;
+  height: 170px;
+  background-size: contain;
+  background-position: center;
+}
+
+.content > .profile {
+  position: absolute;
+  top: 65%;
+  left: 7%;
+}
+
+.content > .profile > .pic {
+  background-image: url("/src/assets/img/content/pic_15.png");
+  width: 115px;
+  height: 115px;
+  background-position: center;
+  background-size: cover;
+}
+
+.content > .button {
+  background-image: url(/src/assets/img/content/button_20.png);
+  width: 147px;
+  height: 27px;
+  background-position: center;
+  background-size: cover;
+  float: right;
+  margin-right: 6%;
+  margin-top: 11px;
+  cursor: pointer;
+}
+
+.content > .button > a {
+  height: 100%;
+  display: block;
+}
+
+.txt {
+  width: 83%;
+  margin: 0 auto;
+  padding: 60px 0 0;
+  color: black;
+}
+
+.txt > li {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.txt > .name {
+  font-size: 27px;
+  line-height: 40px;
+}
+
+@media (max-width: 920px) {
+  .content > .cover {
+    background-size: cover;
+  }
+}
+</style>
