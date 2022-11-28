@@ -18,13 +18,71 @@ function addBookmark(e: Event) {}
   <ul class="txt">
     <li class="name">두별</li>
     <li>Web Developer</li>
-    <li>doobyeol@gmail.com</li>
+    <!-- <li>doobyeol@gmail.com</li> -->
+    <li class="flex gray"><span class="pin"></span> Seoul</li>
+    <li class="flex gray">
+      <a href="mailto:doobyeol@gmail.com">
+        <span class="mail"></span> doobyeol@gmail.com
+      </a>
+    </li>
+    <li class="flex">
+      <a
+        href="https://velog.io/@doobyeol"
+        target="_blink"
+        class="velog icon"
+        title="velog"
+      ></a>
+      <a
+        href="https://github.com/doobyeol"
+        target="_blink"
+        class="github icon"
+        title="github"
+      ></a>
+    </li>
   </ul>
 </template>
 
 <style scoped>
 .container {
   height: 100vh;
+}
+.flex {
+  display: flex;
+}
+.txt li .icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: cover;
+  margin: 9px 9px 0 0;
+}
+.gray {
+  color: rgb(91, 92, 101);
+}
+
+.github {
+  background-image: url(/src/assets/img/content/github.png);
+}
+
+.velog {
+  background-image: url(/src/assets/img/content/velog.png);
+  border-radius: 3px;
+}
+
+.pin {
+  width: 16px;
+  height: 16px;
+  margin: 4px 5px 0 0;
+  background-size: cover;
+  background-image: url(/src/assets/img/content/pin.png);
+}
+
+.mail {
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  background-size: cover;
+  background-image: url(/src/assets/img/header/icon_03.png);
 }
 
 .content {
@@ -74,13 +132,13 @@ function addBookmark(e: Event) {}
 .txt {
   width: 83%;
   margin: 0 auto;
-  padding: 60px 0 0;
+  padding: 64px 0 0;
   color: black;
 }
 
 .txt > li {
   font-size: 1.3em;
-  line-height: 21px;
+  line-height: 25px;
 }
 
 .txt > .name {
