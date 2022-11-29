@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { ref, onBeforeMount } from "vue";
-declare const window: any;
-
-function addBookmark(e: Event) {}
 </script>
 
 <template>

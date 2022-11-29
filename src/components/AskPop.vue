@@ -7,7 +7,13 @@ const emit = defineEmits(["showPopup"]);
 const askStore = useAskStore();
 const { asks } = storeToRefs(askStore);
 
-function sendAsk(askItem: Object) {
+  interface item {
+    key: number
+    class: string
+    text: string
+  }
+
+function sendAsk(askItem: item) {
   askStore.registerAsk(askItem);
   emit("showPopup", false);
 }

@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
     },
     {
         path: "/contack",
-        component: () => import("@/views/CONTACK.vue"),
+        component: () => import("@/views/Contack.vue"),
     },
 ];
 
