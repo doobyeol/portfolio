@@ -73,7 +73,7 @@ function showPopup() {
   max-height: 30px;
   background-image: url(/src/assets/img/mail/emoji.png);
   background-size: cover;
-  margin: 10px 0 0 9px;
+  margin: 6px 0 0 9px;
   flex: 1;
 }
 .input_wrap .input {
@@ -85,7 +85,7 @@ function showPopup() {
 
 .input_wrap .input p {
   width: 100%;
-  margin: 11px 0 0 9px;
+  margin: 7px 0 0 9px;
 }
 
 .input_wrap .send {

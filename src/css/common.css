@@ -81,7 +81,9 @@ body {
     height: 53px;
 }
 
-.hdrWrap>header {}
+.hdrWrap>header {
+    box-shadow: 0px 14px 30px -15px rgba(150, 151, 158, 0.25);
+}
 
 .hdrWrap>header>ul {
     overflow: hidden;
