@@ -19,7 +19,7 @@ function showPopup() {
         <li v-for="item in chatItems" :key="item.text" :class="item.class">
           <div class="prf_box" v-if="item.class == 'left'">
             <div class="profile">
-              <img alt="" src="src/assets/img/content/pic_15.png" />
+              <img alt="" src="/src/assets/img/content/pic_15.png" />
               <p class="chat_username">두별</p>
             </div>
           </div>

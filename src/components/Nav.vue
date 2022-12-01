@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-  interface routeLink {
-    name: string
-    to: string
-  }
+interface routeLink {
+  name: string
+  to: string
+}
 
 const routeLinkArr = ref<Array<routeLink>>([
   { name: "INTRO", to: "/intro" },

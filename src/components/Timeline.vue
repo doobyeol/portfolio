@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { ref, onBeforeMount } from "vue";
+
+defineProps<{
+  text: String,
+  link: String,
+  imgPath: String
+}>();
+
 </script>
 
 <template>
@@ -10,22 +18,24 @@
       </div>
       <div class="column">
         <p>
-          입사 1주년 회고록을 써봤어요!
+          {{ text }}
           <a
+            v-if="link"
             target="_blink"
-            href="https://velog.io/@doobyeol/개발자-해보니까-어때-개발-1년차-회고"
-            >https://velog.io/@doobyeol/개발자-해보니까-어때-개발-1년차-회고</a
+            :href="link"
           >
+            {{ link }}
+          </a>
         </p>
-        <div class="img">
+        <div v-if="imgPath" class="img">
           <a
             target="_blink"
-            href="https://velog.io/@doobyeol/개발자-해보니까-어때-개발-1년차-회고"
+            :href="link? link : '/'"
           >
             <img
+              :src="imgPath"
               width="100%"
               height="100%"
-              src="/src/assets/img/timeline/221130.png"
             />
           </a>
         </div>
@@ -84,5 +94,7 @@
 
 .timelineWrap .column .img img {
   object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 </style>
