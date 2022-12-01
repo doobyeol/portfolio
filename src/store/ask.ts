@@ -1,12 +1,14 @@
 import { defineStore } from 'pinia'
 import { ref, onBeforeMount, reactive, computed } from "vue";
 
+export interface Item {
+  key: number
+  class: string
+  text: string
+}
+
+
 export const useAskStore = defineStore('askStore', () => {
-  interface item {
-    key: number
-    class: string
-    text: string
-  }
   const askItem = ref({});
   const asks = ref([
     { key: 0, class: 'right', text: "안녕하세요!" },
@@ -24,18 +26,18 @@ export const useAskStore = defineStore('askStore', () => {
     { key: 4, class: 'left', text: "잘했다고 생각하는 프로젝트는 ..." },
   ]);
 
-  const chatItems = ref<Array<item>>([]);
+  const chatItems = ref<Array<Item>>([]);
 
   const initAsks = () => {
     askItem.value = {};
     chatItems.value = [];
   }
 
-  const registerAsk = (item: item) => {
+  const registerAsk = (item: Item) => {
     askItem.value = item;
     chatItems.value.push(item);
 
-    answers.value.forEach((answer: item) => {
+    answers.value.forEach((answer: Item) => {
       if (answer.key == item.key) {
         chatItems.value.push(answer);
       }
@@ -45,11 +47,11 @@ export const useAskStore = defineStore('askStore', () => {
     removeAnswer(item);
   }
 
-  const removeAsk = (item: item) => {
+  const removeAsk = (item: Item) => {
     asks.value = asks.value.filter((ask) => ask.key != item.key);
   }
 
-  const removeAnswer = (item: item) => {
+  const removeAnswer = (item: Item) => {
     answers.value = answers.value.filter((answer) => answer.key != item.key);
   }
 

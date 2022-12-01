@@ -29,14 +29,6 @@ function showPopup() {
             </div>
           </div>
         </li>
-
-        <!-- <li class="right">
-          <div class="txt_box">
-            <div class="chat_text">
-              <p>안녕하세요!</p>
-            </div>
-          </div>
-        </li> -->
       </ul>
     </div>
 
@@ -58,7 +50,6 @@ function showPopup() {
   display: flex;
   width: 100%;
   height: 6%;
-  /* min-width: 280px; */
   max-width: 800px;
   max-height: 50px;
   margin: 15px auto 0;
@@ -117,7 +108,6 @@ function showPopup() {
 .content .chat_wrap {
   width: 100%;
   height: 85%;
-  /* min-width: 280px; */
   max-width: 800px;
   margin: 0 auto;
   border-radius: 5px;

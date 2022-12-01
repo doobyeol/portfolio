@@ -2,11 +2,10 @@
 import { ref, onBeforeMount } from "vue";
 
 defineProps<{
-  text: String,
-  link: String,
-  imgPath: String
+  text: String;
+  link: String;
+  imgPath: String;
 }>();
-
 </script>
 
 <template>
@@ -19,24 +18,13 @@ defineProps<{
       <div class="column">
         <p>
           {{ text }}
-          <a
-            v-if="link"
-            target="_blink"
-            :href="link"
-          >
+          <a v-if="link" target="_blink" :href="link">
             {{ link }}
           </a>
         </p>
         <div v-if="imgPath" class="img">
-          <a
-            target="_blink"
-            :href="link? link : '/'"
-          >
-            <img
-              :src="imgPath"
-              width="100%"
-              height="100%"
-            />
+          <a target="_blink" :href="link ? link : '/'">
+            <img :src="imgPath" width="100%" height="100%" />
           </a>
         </div>
       </div>
@@ -53,9 +41,11 @@ defineProps<{
 
 .timelineWrap .content {
   width: 83%;
+  max-width: 800px;
   margin: 40px auto 0;
   border-radius: 5px;
-  box-shadow: 0px 0px 15px -2px rgb(150 151 158 / 43%);
+  /* box-shadow: 0px 0px 15px -2px rgb(150 151 158 / 43%); */
+  border: 1px solid #e0e0e0;
   padding: 20px;
 }
 

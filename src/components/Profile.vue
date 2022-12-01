@@ -3,42 +3,50 @@ import { ref, onBeforeMount } from "vue";
 </script>
 
 <template>
-  <div class="content">
-    <div class="cover"></div>
-    <div class="profile">
-      <div class="pic"></div>
+  <div class="profileWrap">
+    <div class="content">
+      <div class="cover"></div>
+      <div class="profile">
+        <div class="pic"></div>
+      </div>
+      <div class="button">
+        <a href="https://github.com/doobyeol" target="_blink"></a>
+      </div>
     </div>
-    <div class="button">
-      <a href="https://github.com/doobyeol" target="_blink"></a>
-    </div>
+    <ul class="txt">
+      <li class="name">두별</li>
+      <li>Web Developer</li>
+      <li class="flex gray"><span class="pin"></span> Seoul</li>
+      <li class="flex gray">
+        <a href="mailto:doobyeol@gmail.com">
+          <span class="mail"></span> doobyeol@gmail.com
+        </a>
+      </li>
+      <li class="flex">
+        <a
+          href="https://velog.io/@doobyeol"
+          target="_blink"
+          class="velog icon"
+          title="velog"
+        ></a>
+        <a
+          href="https://github.com/doobyeol"
+          target="_blink"
+          class="github icon"
+          title="github"
+        ></a>
+      </li>
+    </ul>
   </div>
-  <ul class="txt">
-    <li class="name">두별</li>
-    <li>Web Developer</li>
-    <li class="flex gray"><span class="pin"></span> Seoul</li>
-    <li class="flex gray">
-      <a href="mailto:doobyeol@gmail.com">
-        <span class="mail"></span> doobyeol@gmail.com
-      </a>
-    </li>
-    <li class="flex">
-      <a
-        href="https://velog.io/@doobyeol"
-        target="_blink"
-        class="velog icon"
-        title="velog"
-      ></a>
-      <a
-        href="https://github.com/doobyeol"
-        target="_blink"
-        class="github icon"
-        title="github"
-      ></a>
-    </li>
-  </ul>
 </template>
 
 <style scoped>
+.profileWrap {
+  border-bottom: 1px solid #eeeeef;
+  padding-bottom: 20px;
+  box-shadow: 0px 26px 8px -26px rgb(150 151 158 / 15%);
+}
+
 .txt li .icon {
   width: 30px;
   height: 30px;

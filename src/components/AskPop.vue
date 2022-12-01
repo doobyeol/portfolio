@@ -1,19 +1,13 @@
 <script setup lang="ts">
 import { ref, onBeforeMount } from "vue";
-import { useAskStore } from "../store/ask";
+import { useAskStore, Item } from "../store/ask";
 import { storeToRefs } from "pinia";
 
 const emit = defineEmits(["showPopup"]);
 const askStore = useAskStore();
 const { asks } = storeToRefs(askStore);
 
-  interface item {
-    key: number
-    class: string
-    text: string
-  }
-
-function sendAsk(askItem: item) {
+function sendAsk(askItem: Item) {
   askStore.registerAsk(askItem);
   emit("showPopup", false);
 }
