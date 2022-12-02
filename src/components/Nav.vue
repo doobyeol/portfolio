@@ -2,8 +2,8 @@
 import { ref } from "vue";
 
 interface routeLink {
-  name: string
-  to: string
+  name: string;
+  to: string;
 }
 
 const routeLinkArr = ref<Array<routeLink>>([
@@ -31,7 +31,7 @@ const emit = defineEmits(["showMenu"]);
 
     <div class="ftr">
       <ul>
-        <li>ⓒ2022 Doobyeol Kim. All Rights & Copyright Reserved.</li>
+        <li>ⓒ2022 Doobyeol All Rights & Copyright Reserved.</li>
       </ul>
     </div>
   </div>

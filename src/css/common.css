@@ -13,20 +13,14 @@
         url('/src/assets/fonts/Pixel.woff'),
 }
 
-body {
+body,
+footer,
+.ftr {
     font-family: '모리스9';
 }
 
 .navWrap {
     font-family: 'Pixel';
-}
-
-footer {
-    font-family: '모리스9';
-}
-
-.ftr {
-    font-family: '모리스9';
 }
 
 .hdrWrap,
@@ -137,6 +131,8 @@ body {
     height: 23px;
     background-position: center;
     background-size: cover;
+    position: relative;
+    margin-right: 10px;
 }
 
 .hdrWrap>header>ul>.mail2 {
@@ -155,7 +151,7 @@ body {
 
 .navWrap {
     z-index: 2;
-    width: 280px;
+    width: 205px;
     height: 100vh;
     top: 0;
     background-color: #bc849c;

@@ -2,9 +2,9 @@
 import { ref, onBeforeMount } from "vue";
 
 defineProps<{
-  text: String;
-  link: String;
-  imgPath: String;
+  text: string;
+  link: string | undefined;
+  imgPath: string;
 }>();
 </script>
 

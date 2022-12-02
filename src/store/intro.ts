@@ -18,8 +18,8 @@ export const useIntroStore = defineStore('introStore', () => {
     localStorage.setItem("isWatchedIntro", 'true');
   }
   const isWatchedIntro = () => {
-    const isWatchedIntro = localStorage.getItem("isWatchedIntro");
-    if (isWatchedIntro == 'true') {
+    const isWatched = localStorage.getItem("isWatchedIntro");
+    if (isWatched == 'true') {
       return true;
     }
   }
