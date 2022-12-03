@@ -1,15 +1,25 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from "vue";
+import { storeToRefs } from "pinia";
+import { useTimelineStore } from "../store/timeline";
+
+const timelineStore = useTimelineStore();
+const { activeTab } = storeToRefs(timelineStore);
+
+export interface ItemType {
+  date: string;
+  text: string;
+  type: string;
+  link: string | undefined;
+  imgPath: string | undefined;
+}
 
 defineProps<{
-  text: string;
-  link: string | undefined;
-  imgPath: string;
+  item: ItemType;
 }>();
 </script>
 
 <template>
-  <div class="timelineWrap">
+  <div class="timelineWrap" v-if="item.type == activeTab">
     <div class="content">
       <div class="profile">
         <div class="img" />
@@ -17,14 +27,14 @@ defineProps<{
       </div>
       <div class="column">
         <p>
-          {{ text }}
-          <a v-if="link" target="_blink" :href="link">
-            {{ link }}
+          {{ item.text }}
+          <a v-if="item.link" target="_blink" :href="item.link">
+            {{ item.link }}
           </a>
         </p>
-        <div v-if="imgPath" class="img">
-          <a target="_blink" :href="link ? link : '/'">
-            <img :src="imgPath" width="100%" height="100%" />
+        <div v-if="item.imgPath" class="img">
+          <a target="_blink" :href="item.link ? item.link : '/'">
+            <img :src="item.imgPath" width="100%" height="100%" />
           </a>
         </div>
       </div>
@@ -44,7 +54,6 @@ defineProps<{
   max-width: 800px;
   margin: 40px auto 0;
   border-radius: 5px;
-  /* box-shadow: 0px 0px 15px -2px rgb(150 151 158 / 43%); */
   border: 1px solid #e0e0e0;
   padding: 20px;
 }

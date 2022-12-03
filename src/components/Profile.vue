@@ -42,9 +42,7 @@ import { ref, onBeforeMount } from "vue";
 
 <style scoped>
 .profileWrap {
-  border-bottom: 1px solid #eeeeef;
   padding-bottom: 20px;
-  box-shadow: 0px 26px 8px -26px rgb(150 151 158 / 15%);
 }
 
 .txt li .icon {
