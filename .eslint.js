@@ -1,13 +1,24 @@
 module.exports = {
-    env: {
-        node: true
+    root: true,
+    env: { node: true },
+    parser: "vue-eslint-parser",
+    parserOptions: {
+        parser: "@typescript-eslint/parser",
     },
+    plugins: ["@typescript-eslint", "prettier"],
     extends: [
-        'eslint:recommended',
-        'plugin:vue/vue3-recommended',
-        'prettier'
+        "plugin:@typescript-eslint/recommended",
+        // https://github.com/vuejs/eslint-plugin-vue/blob/44ff0e02cd0fd08b8cd7dee0127dbb5590446323/docs/user-guide/README.md#conflict-with-prettier
+        "plugin:vue/vue3-recommended",
+        "prettier",
     ],
-    rules: [
-        // override or add rules settings here
-    ]
+    rules: {
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+            'error', { 
+                'varsIgnorePattern': '^_', 
+                "argsIgnorePattern": "^_" 
+            }
+        ],
+    },
 };

@@ -3,6 +3,16 @@ import { ref, onBeforeMount, reactive, computed } from "vue";
 
 export const useTimelineStore = defineStore('timelineStore', () => {
 
+    const fixedArticle = ref(
+        {
+            date: "2212011204",
+            type: "fix",
+            text: "어쩌궁저쩌궁",
+            link: "",
+            imgPath: "",
+        },
+    );
+
     const timelineList = ref([
         {
             date: "2212011023",
