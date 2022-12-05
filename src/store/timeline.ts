@@ -1,6 +1,14 @@
 import { defineStore } from 'pinia'
 import { ref, onBeforeMount, reactive, computed } from "vue";
 
+export interface ArticleType {
+  date: string | undefined
+  type: string | undefined
+  text: string | undefined
+  link: string | undefined
+  imgPath: string | undefined
+}
+
 export const useTimelineStore = defineStore('timelineStore', () => {
 
     const fixedArticle = ref(
@@ -13,7 +21,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
         },
     );
 
-    const timelineList = ref([
+    const timelineList = ref<Array<ArticleType>>([
         {
             date: "2212011023",
             type: "career",
@@ -28,7 +36,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             link: "https://velog.io/@doobyeol/개발자-해보니까-어때-개발-1년차-회고",
             imgPath: "/img/timeline/221130.png",
         },
-        { data: "2212011024", text: "Test !", imgPath: "" },
+        { date: "2212011024", text: "Test !", imgPath: "",link: "", type:""},
         {
             date: "2212011023",
             type: "project",
@@ -46,6 +54,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
     return {
         timelineList,
         activeTab,
-        moveTab
+        moveTab,
+        fixedArticle
     }
 })

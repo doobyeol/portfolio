@@ -3,18 +3,20 @@ import { ref, onBeforeMount } from "vue";
 import Profile from "@/components/Profile.vue";
 import Timeline from "@/components/Timeline.vue";
 import Tab from "@/components/Tab.vue";
+import FixArticle from "@/components/FixArticle.vue";
 
 import { storeToRefs } from "pinia";
 import { useTimelineStore } from "../store/timeline";
 
 const timelineStore = useTimelineStore();
-const { timelineList, activeTab } = storeToRefs(timelineStore);
+const { timelineList } = storeToRefs(timelineStore);
 </script>
 
 <template>
   <div class="contentWrap">
-    <Profile></Profile>
-    <Tab></Tab>
+    <Profile />
+    <Tab />
+    <FixArticle />
     <Timeline v-for="item in timelineList" :key="item.date" :item="item" />
   </div>
 </template>

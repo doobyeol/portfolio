@@ -3,15 +3,13 @@ import { storeToRefs } from "pinia";
 import { useTimelineStore, ArticleType } from "../store/timeline";
 
 const timelineStore = useTimelineStore();
-const { activeTab } = storeToRefs(timelineStore);
 
-defineProps<{
-  item: ArticleType;
-}>();
+const { fixedArticle } = storeToRefs(timelineStore);
+
 </script>
 
 <template>
-  <div class="timelineWrap" v-if="item.type == activeTab">
+  <div class="timelineWrap" v-if="fixedArticle">
     <div class="content">
       <div class="profile">
         <div class="img" />
@@ -19,14 +17,14 @@ defineProps<{
       </div>
       <div class="column">
         <p>
-          {{ item.text }}
-          <a v-if="item.link" target="_blink" :href="item.link">
-            {{ item.link }}
+          {{ fixedArticle.text }}
+          <a v-if="fixedArticle.link" target="_blink" :href="fixedArticle.link">
+            {{ fixedArticle.link }}
           </a>
         </p>
-        <div v-if="item.imgPath" class="img">
-          <a target="_blink" :href="item.link ? item.link : '/'">
-            <img :src="item.imgPath" width="100%" height="100%" />
+        <div v-if="fixedArticle.imgPath" class="img">
+          <a target="_blink" :href="fixedArticle.link ? fixedArticle.link : '/'">
+            <img :src="fixedArticle.imgPath" width="100%" height="100%" />
           </a>
         </div>
       </div>
