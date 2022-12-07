@@ -16,7 +16,7 @@ const { fixedArticle } = storeToRefs(timelineStore);
         <p class="name">두별</p>
       </div>
       <div class="column">
-        <p>
+        <p class="preLine">
           {{ fixedArticle.text }}
           <a v-if="fixedArticle.link" target="_blink" :href="fixedArticle.link">
             {{ fixedArticle.link }}
@@ -33,6 +33,11 @@ const { fixedArticle } = storeToRefs(timelineStore);
 </template>
 
 <style scoped>
+
+.preLine {
+  white-space: pre-line;
+  line-height: 14px;
+}
 .timelineWrap {
   width: 100%;
   margin-top: 40px;
@@ -50,6 +55,7 @@ const { fixedArticle } = storeToRefs(timelineStore);
 
 .timelineWrap .profile {
   display: flex;
+  position: relative;
 }
 .timelineWrap .profile .name {
   line-height: 35px;
@@ -61,6 +67,19 @@ const { fixedArticle } = storeToRefs(timelineStore);
   border: 1px solid rgba(204, 204, 204, 0.734);
   border-radius: 20px;
   background-image: url(/src/assets/img/content/pic_15.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.timelineWrap .profile::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  right: -4px;
+  background-image: url(/src/assets/img/content/push_pin.png);
   background-position: center;
   background-size: cover;
 }

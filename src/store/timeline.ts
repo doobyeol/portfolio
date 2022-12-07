@@ -15,7 +15,10 @@ export const useTimelineStore = defineStore('timelineStore', () => {
         {
             date: "2212011204",
             type: "fix",
-            text: "어쩌궁저쩌궁",
+            text: `
+                Front : JavaScript, TypeScript, JQuery, Vue, CSS\n
+                Back : Java, SpringBoot, SpringSecurity, OAuth, JPA, Node.js, SQL, Git\n
+            `,
             link: "",
             imgPath: "",
         },
