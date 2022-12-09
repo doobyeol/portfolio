@@ -37,8 +37,12 @@ defineProps<{
 <style scoped>
 .timelineWrap {
   width: 100%;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   font-family: "";
+}
+
+.timelineWrap:last-child {
+  margin-bottom: 40px;
 }
 
 .timelineWrap .content {

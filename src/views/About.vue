@@ -1,19 +1,29 @@
 <script setup lang="ts">
 import { ref, onBeforeMount, onMounted, watch, nextTick } from "vue";
-import { useAskStore } from "../store/ask";
+import { useAskStore, Item } from "../store/ask";
 import { storeToRefs } from "pinia";
+import LoadingText from "@/components/LoadingText.vue";
 
 const emit = defineEmits(["showPopup"]);
 const askStore = useAskStore();
 const { asks, askItem, chatItems } = storeToRefs(askStore);
 
 const todayDate = ref<string>();
+const showLoadingText = ref<boolean>(false);
 const refScrollBody = ref<null | HTMLDivElement>(null);
 
-watch(askItem, () => {
-  console.log("######## watch");
-  scrollToBottom();
+watch(askItem, (newValue) => {
+  if (askItem.value) {
+    scrollToBottom();
+
+    if (newValue.class == 'right') {
+      showLoadingText.value = true;
+    } else {
+      showLoadingText.value = false;
+    }
+  }
 });
+
 
 onBeforeMount(() => {
   setTodayDate();
@@ -43,6 +53,7 @@ async function scrollToBottom() {
     refScrollBody.value.scrollTop = refScrollBody.value.scrollHeight;
   }
 }
+
 </script>
 
 <template>
@@ -65,6 +76,18 @@ async function scrollToBottom() {
             </div>
           </div>
         </li>
+
+        <li class="left" v-show="showLoadingText">
+          <div class="prf_box">
+            <div class="profile">
+              <img alt="" src="/src/assets/img/content/pic_15.png" />
+              <p class="chat_username">두별</p>
+            </div>
+          </div>
+          <div class="txt_box">
+            <LoadingText :showLoadingText="showLoadingText" />
+          </div>
+        </li> 
       </ul>
     </div>
 
@@ -83,6 +106,12 @@ async function scrollToBottom() {
 </template>
 
 <style scoped>
+
+.loading_text p{
+  min-width: 57px;
+  height: 38px;
+  text-align: center;
+}
 .content {
   font-family: unset !important;
   background-image: url("../assets/img/mail/content_bg.png");

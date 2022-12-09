@@ -15,7 +15,6 @@ function showMenu() {
 }
 
 onBeforeMount(() => {
-  console.log("####### onBeforeMount");
   const isWatchedHelloLocal = localStorage.getItem("isWatchedHello");
   if (isWatchedHelloLocal == "true") {
     askStore.watchedHello();

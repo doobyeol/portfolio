@@ -15,9 +15,14 @@ function sendAsk(askItem: Item) {
 
 <template>
   <div class="popWrap">
-    <ul>
-      <li v-for="ask in asks" :key="ask.key" @click="sendAsk(ask)">
+    <ul v-if="(asks.length > 0)">
+      <li v-for="ask in asks.slice(0, 5)" :key="ask.key" @click="sendAsk(ask)">
         {{ ask.text }}
+      </li>
+    </ul>
+    <ul v-else>
+      <li class="sendMail">
+        <a href="mailto:doobyeol@gmail.com">만나서 더 대화해볼까? </a>
       </li>
     </ul>
   </div>
@@ -43,4 +48,14 @@ function sendAsk(askItem: Item) {
   font-size: 1.16em;
   cursor: pointer;
 }
+
+.popWrap li.sendMail{
+  padding: 0;
+}
+.popWrap li.sendMail a{
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+}
+
 </style>
