@@ -109,7 +109,7 @@ export const useAskStore = defineStore('askStore', () => {
         setTimeout(()=> {
           chatItems.value.push(answer);
           askItem.value = answer;
-        }, 1000);
+        }, 3000);
       }
     })
 

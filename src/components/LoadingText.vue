@@ -33,23 +33,30 @@ function sleep(ms:number) {
 
 <template>
   <div class="chat_text loading_text">
-    <p>{{ loadingText }}</p>
+    <p class="loading_dot">{{ loadingText }}</p>
+    <p class="loading_info">입력중</p>
   </div>
 </template>
 
 <style scoped>
 
-.loading_text p{
+.loading_text p.loading_dot{
   min-width: 57px;
   height: 38px;
   text-align: center;
 }
-
-.content .chat_wrap .chat_body .chat_text {
-  display: flex;
+.loading_text p.loading_info{
+  margin: 2px 0 13px 7px;
+  font-size: 0.8em;
+  font-family: unset;
+  color: #a3a3a4;
 }
 
-.content .chat_wrap .txt_box .chat_text p {
+.content .chat_wrap .chat_body .chat_text {
+  display: unset !important;
+}
+
+.content .chat_wrap .txt_box .chat_text p.loading_dot {
   width: max-content;
   max-width: 75%;
   background-color: #e5e5e6;
