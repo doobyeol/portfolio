@@ -63,17 +63,6 @@ async function scrollToBottom() {
         <p class="date">{{ todayDate }}</p>
       </div>
       <ul class="chat_body">
-        <li class="left">
-          <div class="prf_box">
-            <div class="profile">
-              <img alt="" src="/src/assets/img/content/pic_15.png" />
-              <p class="chat_username">두별</p>
-            </div>
-          </div>
-          <div class="txt_box">
-            <LoadingText :showLoadingText="showLoadingText" />
-          </div>
-        </li> 
         <li v-for="item in chatItems" :key="item.text" :class="item.class">
           <div class="prf_box" v-if="item.class == 'left'">
             <div class="profile">
