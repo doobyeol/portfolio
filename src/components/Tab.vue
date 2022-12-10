@@ -12,22 +12,30 @@ interface tabType {
   type: string;
 }
 
+onBeforeMount(() => {
+  activeSetClass();
+});
+
 const tabs = ref([
-  { class: "active", text: "경력", type: "career" },
-  { class: "", text: "프로젝트", type: "project" },
+  { class: "active", text: "소개", type: "introduction" },
+  { class: "", text: "경력", type: "career" },
   { class: "", text: "블로그", type: "blog" },
 ]);
 
 function onTab(tab: tabType) {
+  timelineStore.moveTab(tab.type);
+  activeSetClass();
+}
+
+function activeSetClass() {
   tabs.value = tabs.value.filter((tabItem) => {
-    if (tabItem.text == tab.text) {
+    if (tabItem.type == activeTab.value) {
       tabItem.class = "active";
     } else {
       tabItem.class = "";
     }
     return tabItem;
   });
-  timelineStore.moveTab(tab.type);
 }
 </script>
 
