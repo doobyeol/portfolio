@@ -2,7 +2,6 @@
 import router from "@/router";
 import { ref, onBeforeMount, onUnmounted } from "vue";
 import { useIntroStore } from "../store/intro";
-import { storeToRefs } from "pinia";
 
 const introStore = useIntroStore();
 
@@ -10,12 +9,10 @@ const isStop = ref(false);
 const isClickStop = ref(false);
 
 onBeforeMount(() => {
-  console.log("####### onBeforeMount");
   introStore.watchedIntro();
 });
 
 onUnmounted(() => {
-  console.log("#################### onUnmounted");
   clearInterval(intervalStopButton);
   clearTimeout(stopTimeout.value);
 });
@@ -23,30 +20,36 @@ onUnmounted(() => {
 const stopTimeout = ref();
 
 const intervalStopButton = setInterval(() => {
-  console.log("####### intervalStopButton setInterval");
-
   isStop.value = !isStop.value;
 }, 250);
 
 const clickStopButton = () => {
-  console.log("####### clickStopButton");
   isClickStop.value = true;
   isStop.value = true;
-  console.log("####### clearInterval");
   clearInterval(intervalStopButton);
 
   stopTimeout.value = setTimeout(() => {
-    console.log("####### setTimeout");
     router.push("/");
   }, 6000);
 };
+
+const stopUrl = ref<string>('/src/assets/img/intro/images/stop.gif');
+const playUrl = ref<string>('/src/assets/img/intro/images/play.gif');
+const gifOption = ref<string>('no-repeat center center fixed');
 </script>
 
 <template>
   <div class="introWrap">
     <div class="ilustWrap">
       <div class="illust"></div>
-      <div class="play" :class="isClickStop ? 'stop' : ''"></div>
+      <div 
+        class="play" 
+        :class="isClickStop ? 'stop' : ''"
+        :style="{ 
+          background : isClickStop ? 
+          `url(${stopUrl + '?' + Math.random()}) ${gifOption}` 
+          : `url(${playUrl}) ${gifOption}` }"
+      />
     </div>
     <div class="buttonWrap">
       <div v-show="!isStop" class="txt">Click!</div>
@@ -90,16 +93,14 @@ const clickStopButton = () => {
   width: 100%;
   height: 100%;
   background-position: center;
-  background: url(/src/assets/img/intro/images/play.gif) no-repeat center center
-    fixed;
+  /* background: url(/src/assets/img/intro/images/play.gif) no-repeat center center fixed; */
   background-size: contain;
   overflow: hidden;
   position: absolute;
 }
 
 .introWrap .play.stop {
-  background: url(/src/assets/img/intro/images/stop.gif) no-repeat center center
-    fixed;
+  /* background: url(/src/assets/img/intro/images/stop.gif) no-repeat center center fixed; */
   background-size: contain;
 }
 
