@@ -61,40 +61,39 @@ export const useTimelineStore = defineStore('timelineStore', () => {
     }
 
     const getPostList = async () => {
-        const data:any = {
-            query: `
-                query Posts($cursor: ID, $username: String, $temp_only: Boolean, $limit: Int) {
-                    posts(cursor: $cursor, username: $username, temp_only: $temp_only, limit: $limit) {
-                        id
-                        title
-                        short_description
-                        thumbnail
-                        user {
-                            username
-                            profile {
-                                thumbnail
-                            }
-                        }
-                        url_slug
-                        released_at
-                        updated_at
-                        comments_count
-                        tags
-                        likes
-                    }
-                }
-            `,
-            variables: {"username": "doobyeol", "limit": 100},
-        };
-
         try {
-            const postsResponse = await fetch('https://cors-anywhere.herokuapp.com/https://v2.velog.io/graphql', {
+            const postsResponse = await fetch('https://proxy.cors.sh/https://v2.velog.io/graphql', { 
+                                                // https://cors-anywhere.herokuapp.com/https://v2.velog.io/graphql
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json' ,
                     'Origin': 'application/json' ,
-                    },
-                body: JSON.stringify(data)
+                },
+                body: JSON.stringify({
+                    query: `
+                        query Posts($cursor: ID, $username: String, $temp_only: Boolean, $limit: Int) {
+                            posts(cursor: $cursor, username: $username, temp_only: $temp_only, limit: $limit) {
+                                id
+                                title
+                                short_description
+                                thumbnail
+                                user {
+                                    username
+                                    profile {
+                                        thumbnail
+                                    }
+                                }
+                                url_slug
+                                released_at
+                                updated_at
+                                comments_count
+                                tags
+                                likes
+                            }
+                        }
+                    `,
+                    variables: {"username": "doobyeol", "limit": 100},
+                })
             } );
             const postsData = await postsResponse.json();
 
@@ -110,9 +109,6 @@ export const useTimelineStore = defineStore('timelineStore', () => {
                 });
             }
 
-            
-            // return postsData.data;
-            console.log('### postsData : ', postsData);
         } catch (e) {
             console.error(e);
         }
