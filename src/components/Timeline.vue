@@ -39,10 +39,12 @@ defineProps<{
 
 .preLine {
   white-space: pre-line;
+  /* line-height: 10px; */
 }
 .preLine b {
   display: block;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
+  line-height: 20px;
 }
 .timelineWrap {
   width: 100%;

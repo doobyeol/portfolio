@@ -158,7 +158,7 @@ async function scrollToBottom() {
 }
 
 .content .chat_wrap .chat_body .right {
-  margin: 25px 0 0 0;
+  margin: 25px 0 25px 0;
 }
 
 .content .chat_wrap .right .chat_text {
