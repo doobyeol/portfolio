@@ -35,7 +35,7 @@ const clickStopButton = () => {
 
 const stopUrl = ref<string>('/src/assets/img/intro/images/stop.gif');
 const playUrl = ref<string>('/src/assets/img/intro/images/play.gif');
-const gifOption = ref<string>('no-repeat center center fixed');
+const gifOption = ref<string>('no-repeat center / contain fixed');
 </script>
 
 <template>
@@ -92,17 +92,17 @@ const gifOption = ref<string>('no-repeat center center fixed');
 .introWrap .play {
   width: 100%;
   height: 100%;
-  background-position: center;
-  /* background: url(/src/assets/img/intro/images/play.gif) no-repeat center center fixed; */
-  background-size: contain;
+  /* background-position: center;
+  background: url(/src/assets/img/intro/images/play.gif) no-repeat center center fixed;
+  background-size: contain; */
   overflow: hidden;
   position: absolute;
 }
 
-.introWrap .play.stop {
-  /* background: url(/src/assets/img/intro/images/stop.gif) no-repeat center center fixed; */
+/* .introWrap .play.stop {
+  background: url(/src/assets/img/intro/images/stop.gif) no-repeat center center fixed;
   background-size: contain;
-}
+} */
 
 .buttonWrap {
   width: 100%;
