@@ -18,7 +18,8 @@ defineProps<{
         <p class="name">두별</p>
       </div>
       <div class="column">
-        <p>
+        <p class="preLine">
+          <b> {{ item.title }} </b>
           {{ item.text }}
           <a v-if="item.link" target="_blink" :href="item.link">
             {{ item.link }}
@@ -35,6 +36,14 @@ defineProps<{
 </template>
 
 <style scoped>
+
+.preLine {
+  white-space: pre-line;
+}
+.preLine b {
+  display: block;
+  padding-bottom: 12px;
+}
 .timelineWrap {
   width: 100%;
   /* margin-top: 40px; */

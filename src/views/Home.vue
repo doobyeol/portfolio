@@ -10,6 +10,10 @@ import { useTimelineStore } from "../store/timeline";
 
 const timelineStore = useTimelineStore();
 const { timelineList } = storeToRefs(timelineStore);
+
+onBeforeMount(() => {
+  timelineStore.getPostList();
+});
 </script>
 
 <template>
@@ -17,7 +21,7 @@ const { timelineList } = storeToRefs(timelineStore);
     <Profile />
     <Tab />
     <PixArticle />
-    <Timeline v-for="item in timelineList" :key="item.date" :item="item" />
+    <Timeline v-for="item in timelineList" :key="item.date" :item="item"/>
   </div>
 </template>
 
