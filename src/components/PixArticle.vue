@@ -4,8 +4,11 @@ import { storeToRefs } from "pinia";
 import { useTimelineStore, ArticleType } from "../store/timeline";
 import Badge from "@/components/Badge.vue";
 const timelineStore = useTimelineStore();
+const { activeTab } = storeToRefs(timelineStore);
 
-const { fixedArticle } = storeToRefs(timelineStore);
+defineProps<{
+  item: ArticleType;
+}>();
 
 const skillsBadge = ref<Array<any>>([
   {value: 'Java', color: '#5283a2'},
@@ -24,25 +27,25 @@ const skillsBadge = ref<Array<any>>([
 </script>
 
 <template>
-  <div class="timelineWrap" v-if="fixedArticle">
+  <div class="timelineWrap"  v-if="item.type == activeTab" >
     <div class="content">
       <div class="profile">
         <!-- <div class="img" />
         <p class="name">두별</p> -->
-        <b> {{ fixedArticle.title }} </b>
+        <b> {{ item.title }} </b>
       </div>
       <div class="column">
         <p class="preLine">
-          <!-- <b> {{ fixedArticle.title }} </b> -->
-          <Badge :items="skillsBadge" />
-          {{ fixedArticle.text }}
-          <a v-if="fixedArticle.link" target="_blink" :href="fixedArticle.link">
-            {{ fixedArticle.link }}
+          <!-- <b> {{ fixeditem.title }} </b> -->
+          <Badge :items="skillsBadge" v-if="item.type == 'introduction'" />
+          {{ item.text }}
+          <a v-if="item.link" target="_blink" :href="item.link">
+            {{ item.link }}
           </a>
         </p>
-        <div v-if="fixedArticle.imgPath" class="img">
-          <a target="_blink" :href="fixedArticle.link ? fixedArticle.link : '/'">
-            <img :src="fixedArticle.imgPath" width="100%" height="100%" />
+        <div v-if="item.imgPath" class="img">
+          <a target="_blink" :href="item.link ? item.link : '/'">
+            <img :src="item.imgPath" width="100%" height="100%" />
           </a>
         </div>
       </div>
@@ -69,7 +72,7 @@ const skillsBadge = ref<Array<any>>([
 
 .preLine {
   white-space: pre-line;
-  line-height: 14px;
+  line-height: 25px;
 }
 .timelineWrap {
   width: 100%;

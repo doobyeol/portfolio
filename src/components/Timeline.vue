@@ -39,7 +39,7 @@ defineProps<{
 
 .preLine {
   white-space: pre-line;
-  /* line-height: 10px; */
+  line-height: 25px;
 }
 .preLine b {
   display: block;
@@ -91,19 +91,24 @@ defineProps<{
 }
 .timelineWrap .column .img {
   width: 100%;
-  /* height: 220px; */
+  height: 220px;
   background-size: cover;
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #e7e7e7;
-
-  overflow: hidden;
-  /* max-height: 355px; */
 }
 
 .timelineWrap .column .img img {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 540px) {
+  .timelineWrap .column .img{
+    overflow: hidden;
+    max-height: 355px;
+    height: unset;
+  }
 }
 </style>

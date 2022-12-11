@@ -9,8 +9,7 @@ import { storeToRefs } from "pinia";
 import { useTimelineStore } from "../store/timeline";
 
 const timelineStore = useTimelineStore();
-const { timelineList } = storeToRefs(timelineStore);
-
+const { timelineList, fixedArticle } = storeToRefs(timelineStore);
 onBeforeMount(() => {
   timelineStore.getPostList();
 });
@@ -20,7 +19,7 @@ onBeforeMount(() => {
   <div class="contentWrap">
     <Profile />
     <Tab />
-    <PixArticle />
-    <Timeline v-for="item in timelineList" :key="item.date" :item="item"/>
+    <PixArticle v-for="item in fixedArticle" :key="item.title" :item="item"/>
+    <Timeline v-for="item in timelineList" :key="item.title" :item="item"/>
   </div>
 </template>
