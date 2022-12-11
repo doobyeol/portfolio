@@ -19,6 +19,7 @@ onBeforeMount(() => {
 const tabs = ref([
   { class: "active", text: "소개", type: "introduction" },
   { class: "", text: "경력", type: "career" },
+  { class: "", text: "프로젝트", type: "project" },
   { class: "", text: "블로그", type: "blog" },
 ]);
 

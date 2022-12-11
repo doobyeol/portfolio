@@ -64,7 +64,7 @@ export const useAskStore = defineStore('askStore', () => {
     {
       key: 5, class: 'left',
       text: `
-        월터의 상상은 현실이 된다! 🏃🏻‍♂️
+        월터의 상상은 현실이 된다! 🏃🏻‍♂️ 영상미가 정말 좋아요. https://youtu.be/b91eY8P46-A 
       `
     },
     {
