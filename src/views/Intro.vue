@@ -33,8 +33,8 @@ const clickStopButton = () => {
   }, 6000);
 };
 
-const stopUrl = ref<string>('/img/intro/images/stop.gif');
-const playUrl = ref<string>('/img/intro/images/play.gif');
+const stopUrl = ref<string>('/img/intro/stop.gif');
+const playUrl = ref<string>('/img/intro/play.gif');
 const gifOption = ref<string>('no-repeat center / contain fixed');
 </script>
 
