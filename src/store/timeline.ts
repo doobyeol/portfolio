@@ -101,7 +101,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             주로 맡은 업무의 기능 단위로 작성하고 해당 기능을 개발하면서 생각한 플로우, 참고한 레퍼런스, 중요한 기능 설명, 개발하면서 겪은 어려운 점과 그걸 어떻게 해결했는지에 대한 과정을 기록 한다. 
             이렇게 작성해두면 나중에 내가 개발했던 기능들을 다시 봐야할 때 업무일지를 참고하여 금방 파악하기가 쉽고 중요한 기능들을 잊지 않고 재사용 할 수 있다.`,
             link: "",
-            imgPath: "/src/assets/img/introduction/introduction_01.png",
+            imgPath: "/img/introduction/introduction_01.png",
         },
         {
             date: "20221211",
@@ -109,7 +109,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             title: "TIL & 회고록 작성하기",
             text:  `개발자는 죽기전까지도 공부를 해야 한다고 하던가.. 그만큼 개발 트렌드를 놓쳐선 안되는 것도 있다. 나는 뭔가 공부하고 깨달은게 있을때 마다 회고록을 작성했다. 회고록을 작성하면 좋은 점은 내가 이만큼 공부했구나, 내가 이만큼 성장했구나를 볼 수 있고 성취감 덕분에 더 열심히 하게 된다는 것!`,
             link: "https://velog.io/@doobyeol/series",
-            imgPath: "/src/assets/img/introduction/introduction_02.png",
+            imgPath: "/img/introduction/introduction_02.png",
         },
         {
             date: "20221211",
@@ -117,7 +117,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             title: "아무리 검색해도 안나오는 에러들은 꼭 기록을 해두어야 한다. 그리고 자주 겪는 에러들도 마찬가지!",
             text:  `에러의 발생 원인과 해결 방법을 기록하면 나중에 같은 에러를 겪었을 때 바로 해결방법은 안떠오르더라도 아! 이거 겪어본 에러야! 하면서 이전에 기록해둔 블로그와 노션을 참고하여 금방 해결할 수 있었다.`,
             link: "https://velog.io/@doobyeol?tag=error",
-            imgPath: "/src/assets/img/introduction/introduction_03.png",
+            imgPath: "/img/introduction/introduction_03.png",
         },
         {
             date: "20221211",
@@ -130,7 +130,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             그리고 그런 긍정적인 에너지들이 나를 믿어주고 지켜봐주는 이들에게도 분명 좋은 영향을 줄 수 있을 것이라 믿는다.
             그래서 나는 결과보다 경험의 가치를 아는 사람이 되고자 한다!`,
             link: "",
-            imgPath: "/src/assets/img/introduction/introduction_04.png"
+            imgPath: "/img/introduction/introduction_04.png"
         },
         {
             date: "20221211",
@@ -141,7 +141,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             화면을 동적으로 개발하는 프론트는 눈으로 보는 재미가 있지만, 그에 비해 백엔드는 추상적이고 어렵다는 느낌이 강했다.
             그래서 백엔드 공부를 집중적으로 시작했는데, 추상적이라고 느꼇던 개념들이 눈에 보이기 시작했다. 점점 더 알아갈수록, 어렵다고 느꼈던 벽이 허물어지고 얻게 되는 성취감들이 정말 짜릿한 것 같다..!`,
             link: "",
-            imgPath: "/src/assets/img/introduction/introduction_05.png"
+            imgPath: "/img/introduction/introduction_05.png"
         },
         {
             date: "20221211",
@@ -168,7 +168,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
                 Github : https://github.com/doobyeol/portfolio
             `,
             link: "https://doobyeol.github.io/",
-            imgPath: "/src/assets/img/project/portfolio.png",
+            imgPath: "/img/project/portfolio.png",
         },
         {
             date: "20221211",
@@ -184,7 +184,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
                 Github : https://github.com/doobyeol/lol-ground/tree/doobyeol
             `,
             link: "https://returntrue.tk/",
-            imgPath: "/src/assets/img/project/lol_ground.png",
+            imgPath: "/img/project/lol_ground.png",
         },
         {
             date: "20221211",
@@ -202,7 +202,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
 
             `,
             link: "https://github.com/doobyeol/happiness-museum",
-            imgPath: "/src/assets/img/project/happiness_museum.png",
+            imgPath: "/img/project/happiness_museum.png",
         },
         {
             date: "20221211",
@@ -231,7 +231,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
 
             `,
             link: "https://github.com/doobyeol/SeoulMate",
-            imgPath: "/src/assets/img/project/seoulmate_02.png",
+            imgPath: "/img/project/seoulmate_02.png",
         },
         {
             date: "20221211",
@@ -262,7 +262,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
 
             `,
             link: "https://github.com/doobyeol/SeoulMate",
-            imgPath: "/src/assets/img/project/seoulmate_01.png",
+            imgPath: "/img/project/seoulmate_01.png",
         },
     ]);
 
