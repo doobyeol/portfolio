@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
-    <p>준비중</p>
+  <div class="container">
+    <p>🚧 준비중</p>
   </div>
 </template>

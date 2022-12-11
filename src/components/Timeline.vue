@@ -91,11 +91,14 @@ defineProps<{
 }
 .timelineWrap .column .img {
   width: 100%;
-  height: 150px;
+  /* height: 220px; */
   background-size: cover;
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #e7e7e7;
+
+  overflow: hidden;
+  /* max-height: 355px; */
 }
 
 .timelineWrap .column .img img {

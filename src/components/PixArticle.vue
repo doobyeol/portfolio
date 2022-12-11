@@ -14,7 +14,7 @@ const skillsBadge = ref<Array<any>>([
   {value: 'PostgreSQL', color: '#526e8e', logo: 'https://simpleicons.org/icons/postgresql.svg'},
   {value: 'Node.js', color: '#759c60', logo: 'https://simpleicons.org/icons/nodedotjs.svg'},
   {value: 'Vue.js', color: '#11b48a', logo: 'https://simpleicons.org/icons/vuedotjs.svg'},
-  {value: 'JavaScript', color: '#ce8500', logo: 'https://simpleicons.org/icons/javascript.svg'},
+  {value: 'JavaScript', color: '#f5b33c', logo: 'https://simpleicons.org/icons/javascript.svg'},
   {value: 'TypeScript', color: '#1c63b3', logo: 'https://simpleicons.org/icons/typescript.svg'},
   {value: 'SCSS', color: '#c9469d', logo: 'https://simpleicons.org/icons/sass.svg'},
   {value: 'Git', color: '#3e3e4a', logo: 'https://simpleicons.org/icons/git.svg'},
