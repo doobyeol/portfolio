@@ -40,7 +40,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             - 관리자 페이지 개발
             - Azure OAuth SSO 개발
             - 판매실적/점두가 통계 쿼리 작성
-            \n
+
             2. Kagos 자산관리 솔루션 WEB ( 2022.01 ~ 2022.07 )
             - 기술스택 : Vue, Javascript, Java, Spring Boot, postgreSQL
             - Spring Security + JWT 로그인 개발
@@ -49,7 +49,7 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             - Vue Slot을 사용한 공통 레이아웃 개발
             - 공통 Vue 컴포넌트 개발
             - Frontend 공통 API 모듈 개발
-            \n
+
             3. LG 하이케어 상황실 시스템 WEB (2021.08 ~ 2021.12)
             - 기술스택 : JSP, jQuery, Java, Spring, postgreSQL
             - Tmap 기반 실시간 모니터링 알림 서비스 개발
@@ -66,19 +66,19 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             1. 안전보건공단 위기탈출안전점검 APP (2018.03 ~ 2019.03)
             - 기술스택 : HTML, CSS, Javascript, JSP
             - UI&UX 디자인 & 퍼블리싱
-            \n
+
             2. 안전보건공단 현장배송서비스 WEB (2019.03 ~ 2019.07)
             - 기술스택 : HTML, CSS, Javascript, JSP
             - UI&UX 디자인 & 퍼블리싱
-            \n
+
             3. 삼성전자 중장비 APP / CMS WEB (2019.08 ~ 2019.12)
             - 기술스택 : HTML, CSS, Javascript, JSP
             - UI&UX 디자인 & 퍼블리싱
-            \n
+
             4. 솔트웍스 프로젝트 매니지먼트 WEB (2019.10 ~ 2020.02)
             - 기술스택 : HTML, CSS, Javascript, JSP
             - UI&UX 디자인 & 퍼블리싱
-            \n
+
             5. 안전보건공단 위기탈출안전보건 APP (2019.12 ~ 2020.02)
             - 기술스택 : HTML, CSS, Javascript, JSP
             - UI&UX 디자인 & 퍼블리싱`,
@@ -295,17 +295,18 @@ export const useTimelineStore = defineStore('timelineStore', () => {
             date: "20221124",
             type: "career",
             title: '학력',
-            text: `2020.12 ~ 2021.05 비트캠프 학원
-                - 웹 개발자 양성 국비 과정 수료
+            text: `
+                2020.12 ~ 2021.05 
+                비트캠프 - 웹 개발자 양성 국비 과정 수료
 
-                2018.04 ~ 2018.10 그린컴퓨터아트 학원
-                - 반응형 웹 퍼블리싱 국비 과정 수료
+                2018.04 ~ 2018.10 
+                그린컴퓨터아트학원 - 반응형 웹 퍼블리싱 국비 과정 수료
 
-                2014.03 ~ 2018.02 용인대학교
-                - 미디어디자인과 졸업
+                2014.03 ~ 2018.02 
+                용인대학교 - 미디어디자인과 졸업
 
-                2012.03 ~ 2014.02 서울디자인고등학교
-                - 영상디자인과 졸업
+                2012.03 ~ 2014.02 
+                서울디자인고등학교 - 영상디자인과 졸업
             `,
             link: "",
             imgPath: "",

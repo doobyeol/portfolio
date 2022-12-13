@@ -50,6 +50,6 @@ function showPopup(isShow: boolean) {
 .contentWrap {
   overflow-y: scroll;
   height: calc(100vh - 53px);
-  padding-bottom: 40px;
+  padding-bottom: 5em;
 }
 </style>

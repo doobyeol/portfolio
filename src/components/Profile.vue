@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from "vue";
+import { useHomeStore } from "../store/home";
+
+const homeStore = useHomeStore();
+
+function clickFollow() {
+  homeStore.showBubble();
+}
 </script>
 
 <template>
@@ -10,7 +16,7 @@ import { ref, onBeforeMount } from "vue";
         <div class="pic"></div>
       </div>
       <div class="button">
-        <a href="https://github.com/doobyeol" target="_blink"></a>
+        <a @click="clickFollow"></a>
       </div>
     </div>
     <ul class="txt">
