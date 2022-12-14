@@ -1,15 +1,17 @@
 <template>
   <div class="bubbleWrafp" :class="isShowBubble? '' : 'hide'">
-    <p class="heart" />
+    <p :class="isEmoji ? isEmoji : ''" >
+      {{ isText ? isText : '' }}
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useHomeStore } from "../store/home";
 import { storeToRefs } from "pinia";
+import { useBubbleStore } from "../store/bubble";
 
-const homeStore = useHomeStore();
-const { isShowBubble } = storeToRefs(homeStore);
+const bubbleStore = useBubbleStore();
+const { isShowBubble, isEmoji, isText } = storeToRefs(bubbleStore);
 </script>
 
 <style scoped>
@@ -34,7 +36,7 @@ const { isShowBubble } = storeToRefs(homeStore);
   background-image: url(/src/assets/img/easteregg/bubble.png);
   background-repeat: no-repeat;
   text-align: center;
-  padding-left: 27px;
+  padding-left: 24px;
   line-height: 49px;
 }
 p.heart {

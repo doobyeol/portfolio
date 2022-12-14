@@ -1,10 +1,35 @@
 <script setup lang="ts">
-import { useHomeStore } from "../store/home";
+import { ref } from "vue";
+import { useBubbleStore } from "../store/bubble";
 
-const homeStore = useHomeStore();
+const bubbleStore = useBubbleStore();
+const toThinkOfSomethings = ref<Array<string>>([
+  'hello, world !', 
+  '배고프다..', 
+  '오늘 뭐먹지..', 
+  '불을 끄고 나왔었나?..', 
+  '누가 자꾸 건드는 느낌..', 
+  '그만 눌러!..', 
+  '사실 좋아..',
+  '이곳에 와줘서 고마워',
+  '오늘 하루 행운이 가득해',
+  '좋은 일이 일어날거야',
+  'no need be best',
+  'only good and kind !',
+]);
+
+const countClickProfile = ref<number>(0);
 
 function clickFollow() {
-  homeStore.showBubble();
+  bubbleStore.onEmoji('heart');
+}
+
+function clickProfile() {
+  bubbleStore.onText(toThinkOfSomethings.value[countClickProfile.value]);
+  countClickProfile.value++;
+  if (toThinkOfSomethings.value.length == countClickProfile.value) {
+    countClickProfile.value = 0
+  }
 }
 </script>
 
@@ -13,7 +38,7 @@ function clickFollow() {
     <div class="content">
       <div class="cover"></div>
       <div class="profile">
-        <div class="pic"></div>
+        <div class="pic"  @click="clickProfile"></div>
       </div>
       <div class="button">
         <a @click="clickFollow"></a>
@@ -112,6 +137,7 @@ function clickFollow() {
   height: 115px;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 
 .content > .button {
