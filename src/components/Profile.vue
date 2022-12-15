@@ -47,7 +47,14 @@ function clickProfile() {
     <ul class="txt">
       <li class="name">두별</li>
       <li>Web Developer</li>
-      <li class="flex gray"><span class="pin"></span> Seoul</li>
+      <li class="flex gray">
+        <a 
+          href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EC%98%81%EB%93%B1%ED%8F%AC%EC%8B%9C%EC%9E%A5%EC%97%AD%EC%95%9E" 
+          target="_blink"
+        >
+          <span class="pin"></span> Seoul
+        </a>
+      </li>
       <li class="flex gray">
         <a href="mailto:doobyeol@gmail.com">
           <span class="mail"></span> doobyeol@gmail.com
@@ -97,9 +104,11 @@ function clickProfile() {
 }
 
 .pin {
+  display: inline-block;  
   width: 16px;
   height: 16px;
-  margin: 4px 5px 0 0;
+  top: 2px;
+  position: relative;
   background-size: cover;
   background-image: url(/src/assets/img/content/pin.png);
 }
