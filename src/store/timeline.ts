@@ -369,12 +369,12 @@ export const useTimelineStore = defineStore('timelineStore', () => {
                 body: data
             } );
             const postsData = await postsResponse.json();
-            console.log('########## postsData', postsData.data);
+            // console.log('########## postsData', postsData.data);
             
             pushPostsResponse(postsData.data.posts);
 
         } catch (e) {
-            console.log(e);
+            // console.log(e);
             url = 'https://cors-anywhere.herokuapp.com/https://v2.velog.io/graphql';
             
             try {
@@ -387,11 +387,11 @@ export const useTimelineStore = defineStore('timelineStore', () => {
                     body: data
                 } );
                 const postsData = await postsResponse.json();
-                console.log('########## postsData', postsData.data);
+                // console.log('########## postsData', postsData.data);
                 pushPostsResponse(postsData.data.posts);
 
             } catch(e) {
-                console.log(e);
+                // console.log(e);
                 timelineList.value.push({
                     date: getTodayDate(),
                     type: "blog",
