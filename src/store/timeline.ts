@@ -365,42 +365,23 @@ export const useTimelineStore = defineStore('timelineStore', () => {
                 headers: { 
                     'Content-Type': 'application/json' ,
                     'Origin': 'application/json' ,
+                    'x-cors-api-key': import.meta.env.VITE_CORS_API_KEY,
                 },
                 body: data
             } );
             const postsData = await postsResponse.json();
-            // console.log('########## postsData', postsData.data);
             
             pushPostsResponse(postsData.data.posts);
 
         } catch (e) {
-            // console.log(e);
-            url = 'https://cors-anywhere.herokuapp.com/https://v2.velog.io/graphql';
-            
-            try {
-                const postsResponse = await fetch(url, { 
-                    method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json' ,
-                        'Origin': 'application/json' ,
-                    },
-                    body: data
-                } );
-                const postsData = await postsResponse.json();
-                // console.log('########## postsData', postsData.data);
-                pushPostsResponse(postsData.data.posts);
-
-            } catch(e) {
-                // console.log(e);
-                timelineList.value.push({
-                    date: getTodayDate(),
-                    type: "blog",
-                    title: `[ 블로그에 놀러오세요! ]`,
-                    text: `경험을 기록합니다.`,
-                    link: "https://velog.io/@doobyeol",
-                    imgPath: "/img/timeline/blog_info.PNG",
-                });
-            }
+            timelineList.value.push({
+                date: getTodayDate(),
+                type: "blog",
+                title: `[ 블로그에 놀러오세요! ]`,
+                text: `경험을 기록합니다.`,
+                link: "https://velog.io/@doobyeol",
+                imgPath: "/img/timeline/blog_info.PNG",
+            });
         }
     }
 
